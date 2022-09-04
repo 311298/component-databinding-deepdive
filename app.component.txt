@@ -2,4 +2,20 @@ section 5: component and databinding deep dive
 
 =================================================================================
 
+note : ng g c --skip-tests=true componentName -> to not create the spec.ts file
+
 64.
+breaked the AppComponent into 2 component like cockpit component and server-element component.
+And will be using the input and output between the child and parent component.
+
+65.
+oveview of property and data binding
+
+66.
+when we try to apply the for loop inside of the component tag, few things to remember.
+1st list must be defined inside the component where you are apply, means app.html and app.ts have list definition.
+2nd when we will do property binding known element inside the component tag must be defined or else error.
+@Input( ) variable -> when we apply the input decorator before the variable now it will be accessible to the parent component of that particular component.
+To show it we need the property binding [variable in child component]="variable from parent component"
+
+67.
