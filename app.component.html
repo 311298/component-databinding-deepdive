@@ -1,5 +1,18 @@
+<h2>parent component: {{ datafromchild }}</h2>
+<input type="text" [(ngModel)]="parentdata" />
+<app-child
+  [datafromparent]="parentdata"
+  (outputtingdata)="functioncatchingdata($event)"
+></app-child>
+<hr />
+
+<div>================================================</div>
+
 <div class="container">
-  <app-cockpit></app-cockpit>
+  <app-cockpit
+    (serverCreated)="onServerAdded($event)"
+    (blueprintCreated)="onBlueprintAdded($event)"
+  ></app-cockpit>
   <hr />
   <div class="row">
     <div class="col-xs-12">

@@ -19,3 +19,12 @@ when we try to apply the for loop inside of the component tag, few things to rem
 To show it we need the property binding [variable in child component]="variable from parent component"
 
 67.
+@Input('alias') [alias]="expression".
+
+69.
+first we saved data in 2 variables named newservername and newservercontent.
+two different function were assigned for 2 different button.
+2 custom output event are created using @Output() nameofevent= new eventemitter<type and data need to passed for example string or complex one is {key1:type1,key2:type2}>.
+on function we need to emit those by calling eventemitter varaiable and emit it.
+one thing to note that where we output that event must have same type or else data will not render.
+things to remember is all the action of input and output is done on child component
