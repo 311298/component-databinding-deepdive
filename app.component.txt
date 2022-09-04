@@ -27,4 +27,26 @@ two different function were assigned for 2 different button.
 2 custom output event are created using @Output() nameofevent= new eventemitter<type and data need to passed for example string or complex one is {key1:type1,key2:type2}>.
 on function we need to emit those by calling eventemitter varaiable and emit it.
 one thing to note that where we output that event must have same type or else data will not render.
-things to remember is all the action of input and output is done on child component
+things to remember is all the action of input and output is done on child component.
+
+70.
+we can also put alias in ouput decorator
+
+72.
+for each component angular gives special attributes through which each html element will have unique ID to identify with.
+
+73.
+inside the @Component decorator we add the encapsulation : viewEncapsulatioShadowDomn and it has 3 properties.
+emulated is by default.
+none -> the component where it is applied will not strange attributes and if we apply the css here in the component it will render globally.
+shadowDom -> will give same result as emulated but where it is supported in the browsers.
+
+74.
+Instead of 2 way data binding we can create the local reference using the #.
+and pass it inside the function where it has been used. 
+important thing to note that is #localreference is only defined inside the html template.
+to access it inside the .ts file we have to pass it using the function.
+
+75.
+    @ViewChild('serverContentInput', {static: true}) serverContentInput: ElementRef;
+    

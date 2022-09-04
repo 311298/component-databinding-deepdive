@@ -8,9 +8,14 @@ import { Component } from "@angular/core";
 export class AppComponent {
   parentdata!: string;
   datafromchild!: string;
+  localreferencedatafromhtml!: string;
 
   functioncatchingdata(input: string): void {
     this.datafromchild = input;
+  }
+
+  functionforlocalreference(input: HTMLInputElement) {
+    this.localreferencedatafromhtml = input.value;
   }
 
   ////////////////////////////////////////////////////////////////////

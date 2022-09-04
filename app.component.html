@@ -1,7 +1,13 @@
 <h2>parent component: {{ datafromchild }}</h2>
-<input type="text" [(ngModel)]="parentdata" />
+<!-- <input type="text" [(ngModel)]="parentdata" /> -->
+<input
+  type="text"
+  #localreference
+  (input)="functionforlocalreference(localreference)"
+/>
+<!-- [datafromparent]="localreferencedatafromhtml" using local reference -->
 <app-child
-  [datafromparent]="parentdata"
+  [datafromparent]="localreference.value"
   (outputtingdata)="functioncatchingdata($event)"
 ></app-child>
 <hr />
